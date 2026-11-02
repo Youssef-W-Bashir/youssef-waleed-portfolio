@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --canvas: 244 242 235;
+    --ink: 23 23 23;
+    --muted: 53 53 53;
+    --surface: 232 229 220;
+    --panel: 23 23 23;
+    --panel-ink: 244 242 235;
+    color-scheme: light;
+  }
+
+  .dark {
+    --canvas: 23 23 23;
+    --ink: 244 242 235;
+    --muted: 133 139 145;
+    --surface: 32 32 32;
+    --panel: 53 53 53;
+    --panel-ink: 244 242 235;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+    line-height: 1.5;
+    transition:
+      background-color 400ms ease,
+      color 400ms ease;
+    overflow-x: clip;
+  }
+
+  ::selection {
+    background: #e54835;
+    color: #171717;
+  }
+
+  :focus-visible {
+    outline: 2px solid #e54835;
+    outline-offset: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+  .label {
+    @apply font-mono text-[0.6875rem] font-medium uppercase tracking-label;
+  }
+
+  .border-current-soft {
+    border-color: color-mix(in srgb, currentColor 20%, transparent);
+  }
+
+  .border-current-strong {
+    border-color: color-mix(in srgb, currentColor 35%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youssef Waleed Beshir | Frontend Developer</title>
+    <link rel="shortcut icon" href="./src/assets/myLogo.jpg" type="image/x-icon">
+    <meta
+      name="description"
+      content="Youssef Waleed Beshir is a frontend developer building responsive React.js interfaces. Second-year Faculty of Science student at Benha University."
+    />
+    <meta property="og:title" content="Youssef Waleed Beshir | Frontend Developer" />
+    <meta property="og:description" content="Frontend developer building responsive React.js interfaces." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="twitter:card" content="summary_large_image">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
