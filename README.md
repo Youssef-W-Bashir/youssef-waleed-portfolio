@@ -102,7 +102,7 @@ project/
 
 Explore the live version of my portfolio:
 
-**[Youssef Waleed — Portfolio](...)**
+**[Youssef Waleed — Portfolio](https://youssef-waleed-portfolio.vercel.app/)**
 
 ## Author
 
